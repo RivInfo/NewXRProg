@@ -6,13 +6,13 @@ using UnityEngine.XR;
 [RequireComponent(typeof(Collider))]
 public class HandInterector : MonoBehaviour
 {
-    public bool IsLeftHand;
+    [SerializeField] private bool IsLeftHand;
 
     public TinyInputDeviceManager InputDeviceManager;
 
-    private InterectableObgect _interectObgInHand;
+    private InterectableObgect _interectObjInHand;
 
-    private InterectableObgect _interectObgOnHand;
+    private List<InterectableObgect> _interectObjecsOnHand = new();
 
     private ActionObject _actionObjectOnHand;
 
@@ -24,12 +24,14 @@ public class HandInterector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.TryGetComponent(out InterectableObgect interectable) && interectable.isActiveAndEnabled)
+        if (other.gameObject.TryGetComponent(out InterectableObgect interectable) 
+            && interectable.isActiveAndEnabled)
         {
-            _interectObgOnHand = interectable;
+            _interectObjecsOnHand.Add(interectable);
         }
 
-        if(other.gameObject.TryGetComponent(out ActionObject actionObject) && actionObject.isActiveAndEnabled)
+        if(other.gameObject.TryGetComponent(out ActionObject actionObject) 
+            && actionObject.isActiveAndEnabled)
         {
             _actionObjectOnHand = actionObject;
         }
@@ -37,13 +39,15 @@ public class HandInterector : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.TryGetComponent(out InterectableObgect interectable) && interectable == _interectObgOnHand)
+        if (other.gameObject.TryGetComponent(out InterectableObgect interectable) 
+            && _interectObjecsOnHand.Contains(interectable))
         {
-            _interectObgOnHand = null;
+            _interectObjecsOnHand.Remove(interectable);
         }
 
 
-        if (other.gameObject.TryGetComponent(out ActionObject actionObject) && _actionObjectOnHand == actionObject)
+        if (other.gameObject.TryGetComponent(out ActionObject actionObject) 
+            && _actionObjectOnHand == actionObject)
         {
             _actionObjectOnHand = null;
         }
@@ -51,34 +55,56 @@ public class HandInterector : MonoBehaviour
 
     private void Update()
     {
-        var inputDevice = IsLeftHand ? InputDeviceManager.LeftController : InputDeviceManager.RightController;
+        var inputDevice = IsLeftHand ? InputDeviceManager.LeftController 
+            : InputDeviceManager.RightController;
 
         inputDevice.TryGetFeatureValue(CommonUsages.gripButton, out bool gripValue);
         inputDevice.TryGetFeatureValue(CommonUsages.triggerButton, out bool triggerButton);
 
-        if (gripValue && _interectObgOnHand != null)
+        if (gripValue && _interectObjecsOnHand.Count>0)
         {
-            _interectObgInHand = _interectObgOnHand;
-            _interectObgOnHand = null;
+            InterectableObgect minDistanceObject = ClosestToHand();
 
-            _interectObgInHand.Rigidbody.isKinematic = true;
-            _interectObgInHand.transform.parent = transform;
+            _interectObjInHand = minDistanceObject;
+
+            _interectObjecsOnHand.Remove(minDistanceObject);
+
+            _interectObjInHand.Rigidbody.isKinematic = true;
+            _interectObjInHand.transform.parent = transform;
         }
 
-        if(!gripValue  && _interectObgInHand!= null)
+        if(!gripValue  && _interectObjInHand!= null)
         {
-            _interectObgInHand.transform.parent = null;
+            _interectObjInHand.transform.parent = null;
             
-            _interectObgInHand.Rigidbody.isKinematic = false;
-            _interectObgInHand = null;
+            _interectObjInHand.Rigidbody.isKinematic = false;
+            _interectObjInHand = null;
         }
 
         if(triggerButton && _actionObjectOnHand != null)
         {
-            _actionObjectOnHand.Swith();
+            _actionObjectOnHand.Activate();
 
             _actionObjectOnHand = null;
         }
+    }
 
+    private InterectableObgect ClosestToHand()
+    {
+        InterectableObgect minDistanceObject = null;
+        float minDistance = 10000f;
+
+        for (int i = 0; i < _interectObjecsOnHand.Count; i++)
+        {
+            float distance = 
+                Vector3.Distance(_interectObjecsOnHand[i].transform.position, transform.position);
+            
+            if (distance < minDistance)
+            {
+                minDistanceObject = _interectObjecsOnHand[i];
+                minDistance = distance;
+            }          
+        }
+        return minDistanceObject;
     }
 }
