@@ -61,13 +61,18 @@ public class HandInterector : MonoBehaviour
         inputDevice.TryGetFeatureValue(CommonUsages.gripButton, out bool gripValue);
         inputDevice.TryGetFeatureValue(CommonUsages.triggerButton, out bool triggerButton);
 
-        if (gripValue && _interectObjecsOnHand.Count>0)
+        if (gripValue && _interectObjecsOnHand.Count > 0 && _interectObjInHand == null)
         {
             InterectableObgect minDistanceObject = ClosestToHand();
+
+            Debug.Log(_interectObjecsOnHand.Count);
 
             _interectObjInHand = minDistanceObject;
 
             _interectObjecsOnHand.Remove(minDistanceObject);
+
+            Debug.Log(_interectObjInHand.name);
+
 
             _interectObjInHand.Rigidbody.isKinematic = true;
             _interectObjInHand.transform.parent = transform;
