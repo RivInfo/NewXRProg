@@ -6,6 +6,7 @@ public class TinyInputDeviceManager : MonoBehaviour
 {
     public InputDevice LeftController { get; private set; }
     public InputDevice RightController { get; private set; }
+    public InputDevice HeadDevice { get; private set; }
 
     private void Awake()
     {
@@ -27,7 +28,10 @@ public class TinyInputDeviceManager : MonoBehaviour
 
     private void InitController(InputDevice inputDevice)
     {
-        Debug.Log(inputDevice.name);
+        if (inputDevice.characteristics.HasFlag(InputDeviceCharacteristics.HeadMounted))
+        {
+            HeadDevice = inputDevice;
+        }
 
         if (!inputDevice.characteristics.HasFlag(InputDeviceCharacteristics.Controller))
         {
@@ -38,7 +42,7 @@ public class TinyInputDeviceManager : MonoBehaviour
         {
             LeftController = inputDevice;
         }
-        else
+        else if (inputDevice.characteristics.HasFlag(InputDeviceCharacteristics.Right))
         {
             RightController = inputDevice;
         }

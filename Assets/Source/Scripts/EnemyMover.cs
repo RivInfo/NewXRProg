@@ -10,7 +10,6 @@ public class EnemyMover : MonoBehaviour
 
     private int _pointNumber = 0;
 
-    
     void Update()
     {
         if( _movePoints != null)

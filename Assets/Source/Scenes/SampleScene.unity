@@ -232,6 +232,8 @@ GameObject:
   - component: {fileID: 35870551}
   - component: {fileID: 35870552}
   - component: {fileID: 35870554}
+  - component: {fileID: 35870556}
+  - component: {fileID: 35870555}
   - component: {fileID: 35870553}
   m_Layer: 0
   m_Name: LeftHand
@@ -314,7 +316,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsLeftHand: 1
-  InputDeviceManager: {fileID: 1375691200}
+--- !u!114 &35870555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35870549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7682abb2db29644abf1dc08ec579e50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsLeftHand: 1
+  _rotateDelay: 1
+  _xAxisRotation: 45
+  _speed: 10
+  _rigidbody: {fileID: 0}
+--- !u!114 &35870556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35870549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15611c0d2384a3b47a40220740ff0457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsLeftHand: 1
 --- !u!1 &57597148
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,8 +1073,10 @@ GameObject:
   - component: {fileID: 514767938}
   - component: {fileID: 514767939}
   - component: {fileID: 514767940}
-  - component: {fileID: 514767941}
   - component: {fileID: 514767942}
+  - component: {fileID: 514767944}
+  - component: {fileID: 514767943}
+  - component: {fileID: 514767941}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: Untagged
@@ -1125,7 +1158,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsLeftHand: 0
-  InputDeviceManager: {fileID: 1375691200}
+--- !u!114 &514767943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514767937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7682abb2db29644abf1dc08ec579e50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsLeftHand: 0
+  _rotateDelay: 1
+  _xAxisRotation: 45
+  _speed: 10
+  _rigidbody: {fileID: 0}
+--- !u!114 &514767944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514767937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15611c0d2384a3b47a40220740ff0457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsLeftHand: 0
 --- !u!1 &537352724
 GameObject:
   m_ObjectHideFlags: 0
