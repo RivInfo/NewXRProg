@@ -64,11 +64,11 @@ public class HandMover : MonoBehaviour
     {
         if(axisY > 0)
         {
-            _inputDeviceManager.transform.Rotate(_xAxisRotation, 0,0);
+            _rigidbody.transform.Rotate(0, _xAxisRotation, 0);
         }
         else
         {
-            _inputDeviceManager.transform.Rotate(-_xAxisRotation, 0, 0);
+            _rigidbody.transform.Rotate(0, -_xAxisRotation, 0);
         }
     }
 
