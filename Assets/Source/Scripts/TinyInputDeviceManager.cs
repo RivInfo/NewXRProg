@@ -27,6 +27,8 @@ public class TinyInputDeviceManager : MonoBehaviour
 
     private void InitController(InputDevice inputDevice)
     {
+        Debug.Log(inputDevice.name);
+
         if (!inputDevice.characteristics.HasFlag(InputDeviceCharacteristics.Controller))
         {
             return;
