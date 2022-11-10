@@ -61,9 +61,10 @@ public class HandInterector : MonoBehaviour
             InterectObjInHand.transform.parent = transform;
         }
 
-        if(!gripValue  && InterectObjInHand!= null)
+        if(!gripValue  && InterectObjInHand != null)
         {
-            InterectObjInHand.transform.parent = null;
+            if(InterectObjInHand.transform.parent == transform)
+                InterectObjInHand.transform.parent = null;
             
             InterectObjInHand.Rigidbody.isKinematic = false;
             InterectObjInHand = null;
