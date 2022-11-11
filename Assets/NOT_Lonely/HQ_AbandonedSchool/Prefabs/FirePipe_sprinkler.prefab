@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4470293116011308}
   - component: {fileID: 33538777848117794}
   - component: {fileID: 23334265323607432}
-  - component: {fileID: 64548615056594978}
   m_Layer: 0
   m_Name: FirePipe_sprinkler
   m_TagString: Untagged
@@ -84,17 +83,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64548615056594978
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1324624559264588}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: f427fa0f47edab64ab996b0b7a3ab0e1, type: 3}

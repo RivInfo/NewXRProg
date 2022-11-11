@@ -68,7 +68,6 @@ GameObject:
   - component: {fileID: 4794294980259128}
   - component: {fileID: 33960457098336286}
   - component: {fileID: 23864606279649110}
-  - component: {fileID: 64950482386444240}
   m_Layer: 0
   m_Name: ElectrisityBoxBig_LOD0
   m_TagString: Untagged
@@ -141,20 +140,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64950482386444240
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1495910259235032}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: d1645e9ae5227f245a8d4011da4bcd76, type: 3}
 --- !u!1 &1742139055748656
 GameObject:
   m_ObjectHideFlags: 0
