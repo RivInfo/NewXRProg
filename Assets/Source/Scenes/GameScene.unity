@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 018b38cce7cd4bb4fa53a6c597e1e40c, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 3a534c92c3d66b84898fba54662db07f, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -272,7 +272,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23565152761608694, guid: d894171bd33d03045ad614cce1c6cc42, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23565152761608694, guid: d894171bd33d03045ad614cce1c6cc42, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 65751434131865076, guid: d894171bd33d03045ad614cce1c6cc42, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d894171bd33d03045ad614cce1c6cc42, type: 3}
 --- !u!4 &42575619 stripped
 Transform:
@@ -742,7 +751,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23565152761608694, guid: d894171bd33d03045ad614cce1c6cc42, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23565152761608694, guid: d894171bd33d03045ad614cce1c6cc42, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 65751434131865076, guid: d894171bd33d03045ad614cce1c6cc42, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d894171bd33d03045ad614cce1c6cc42, type: 3}
 --- !u!4 &95791096 stripped
 Transform:
@@ -1059,9 +1077,9 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 0.8235294, a: 1}
   m_Intensity: 1
-  m_Range: 6
-  m_SpotAngle: 165
-  m_InnerSpotAngle: 21.80208
+  m_Range: 5.5
+  m_SpotAngle: 140
+  m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -1269,6 +1287,10 @@ PrefabInstance:
     - target: {fileID: 4879921337373818, guid: fdb4f16cb66e83145923fa99e3195424, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23495366561158112, guid: fdb4f16cb66e83145923fa99e3195424, type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdb4f16cb66e83145923fa99e3195424, type: 3}
@@ -2791,13 +2813,13 @@ ReflectionProbe:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547318658}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Type: 0
-  m_Mode: 1
+  m_Mode: 0
   m_RefreshMode: 0
   m_TimeSlicingMode: 0
-  m_Resolution: 128
+  m_Resolution: 256
   m_UpdateFrequency: 0
   m_BoxSize: {x: 11.258753, y: 4.708748, z: 4.3786383}
   m_BoxOffset: {x: 0.65368605, y: 0.15307522, z: 0.40418434}
@@ -3933,7 +3955,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23565152761608694, guid: d894171bd33d03045ad614cce1c6cc42, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23565152761608694, guid: d894171bd33d03045ad614cce1c6cc42, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 65751434131865076, guid: d894171bd33d03045ad614cce1c6cc42, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d894171bd33d03045ad614cce1c6cc42, type: 3}
 --- !u!4 &824327582 stripped
 Transform:
@@ -4607,9 +4638,9 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 0.8235294, a: 1}
   m_Intensity: 1
-  m_Range: 6
-  m_SpotAngle: 165
-  m_InnerSpotAngle: 21.80208
+  m_Range: 5.5
+  m_SpotAngle: 140
+  m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -6105,6 +6136,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LampFluoBuiltinA (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1165740374482588, guid: d894171bd33d03045ad614cce1c6cc42, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 127
+      objectReference: {fileID: 0}
     - target: {fileID: 4578169513263378, guid: d894171bd33d03045ad614cce1c6cc42, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -6150,10 +6185,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 23565152761608694, guid: d894171bd33d03045ad614cce1c6cc42, type: 3}
-      propertyPath: m_ReceiveShadows
-      value: 1
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23565152761608694, guid: d894171bd33d03045ad614cce1c6cc42, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 65751434131865076, guid: d894171bd33d03045ad614cce1c6cc42, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d894171bd33d03045ad614cce1c6cc42, type: 3}
 --- !u!4 &1299717033 stripped
 Transform:
@@ -7438,7 +7478,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23565152761608694, guid: d894171bd33d03045ad614cce1c6cc42, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23565152761608694, guid: d894171bd33d03045ad614cce1c6cc42, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 65751434131865076, guid: d894171bd33d03045ad614cce1c6cc42, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d894171bd33d03045ad614cce1c6cc42, type: 3}
 --- !u!4 &1529445827 stripped
 Transform:
@@ -8377,7 +8426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1867157691
 Transform:
   m_ObjectHideFlags: 0
@@ -9517,9 +9566,9 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 0.8235294, a: 1}
   m_Intensity: 1
-  m_Range: 6
-  m_SpotAngle: 165
-  m_InnerSpotAngle: 21.80208
+  m_Range: 5.5
+  m_SpotAngle: 140
+  m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
