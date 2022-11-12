@@ -16,9 +16,15 @@ public class MovePoints : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Индекс вышел за пределы");
+            Debug.LogError("?????? ????? ?? ???????");
         }
 
         return Vector3.zero;
+    }
+
+    public Vector3 GetRandomPosition()
+    {
+        int rnd = Random.Range(0, _movePoints.Length);
+        return _movePoints[rnd].transform.position;
     }
 }
