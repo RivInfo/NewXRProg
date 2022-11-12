@@ -1,20 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
 
-[RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(Collider), typeof(ActionBasedController))]
 public class HandSwither : MonoBehaviour
 {
-    [SerializeField] private bool IsLeftHand;
-
-    private TinyInputDeviceManager _inputDeviceManager;
-
     private ActionObject _actionObjectOnHand;
+
+    private ActionBasedController _xrController;
 
     private void Start()
     {
-        _inputDeviceManager = GetComponentInParent<TinyInputDeviceManager>();
+        _xrController = GetComponent<ActionBasedController>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -23,6 +21,8 @@ public class HandSwither : MonoBehaviour
             && actionObject.isActiveAndEnabled)
         {
             _actionObjectOnHand = actionObject;
+
+            Debug.Log(actionObject);
         }
     }
 
@@ -37,11 +37,9 @@ public class HandSwither : MonoBehaviour
 
     private void Update()
     {
-        var inputDevice = IsLeftHand ? _inputDeviceManager.LeftController
-            : _inputDeviceManager.RightController;
+        bool triggerButton = _xrController.activateInteractionState.value > 0.5f;
 
-        inputDevice.TryGetFeatureValue(CommonUsages.triggerButton, out bool triggerButton);
-
+        Debug.Log(triggerButton);
 
         if (triggerButton && _actionObjectOnHand != null)
         {
