@@ -8,16 +8,15 @@ public class Weapon : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (_isActive && other.TryGetComponent(out EnemyMover enemy))
+        if (_isActive && other.TryGetComponent(out Enemy enemy))
         {
-            Debug.LogWarning("Bonk rouch Trigger");
+            enemy.TakeHit();
         }
     }
 
     public void Activate()
     {
         _isActive = true;
-        Debug.LogWarning("Aktivate");
     }
 
     public void Dectivate()

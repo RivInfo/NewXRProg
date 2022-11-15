@@ -296,6 +296,7 @@ GameObject:
   - component: {fileID: 2593866873514333157}
   - component: {fileID: 8971974888444824852}
   - component: {fileID: 2279995549002230918}
+  - component: {fileID: 3718936789349382021}
   - component: {fileID: 2188337398615966868}
   m_Layer: 0
   m_Name: roach
@@ -355,6 +356,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 0.4
   _rotationAdd: {x: 0, y: 0, z: 0}
+--- !u!114 &3718936789349382021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2933132539848149343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49740314415221245877c179fe493490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dieEffects: {fileID: 1889919486439536, guid: 3fb33178ea886b64e9e849e20465a27c, type: 3}
 --- !u!135 &2188337398615966868
 SphereCollider:
   m_ObjectHideFlags: 0
