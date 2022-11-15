@@ -10,6 +10,11 @@ public class HandSwither : MonoBehaviour
 
     private ActionBasedController _xrController;
 
+    private bool _isSwithAllow = true;
+
+    private float _swithValueActivatio = 0.7f;
+    private float _swithValueAllow = 0.1f;
+
     private void Start()
     {
         _xrController = GetComponent<ActionBasedController>();
@@ -37,15 +42,21 @@ public class HandSwither : MonoBehaviour
 
     private void Update()
     {
-        bool triggerButton = _xrController.activateInteractionState.value > 0.5f;
+        float interactionValue = _xrController.activateInteractionState.value;
 
-        Debug.Log(triggerButton);
+        bool triggerButton = interactionValue > _swithValueActivatio;
 
-        if (triggerButton && _actionObjectOnHand != null)
+        if (interactionValue < _swithValueAllow)
+        {
+            _isSwithAllow = true;
+        }
+
+
+        if (_isSwithAllow && triggerButton && _actionObjectOnHand != null)
         {
             _actionObjectOnHand.Activate();
 
-            _actionObjectOnHand = null;
+            _isSwithAllow = false;
         }
     }
 }
