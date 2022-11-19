@@ -16,4 +16,9 @@ public class Pot : MonoBehaviour
     {
         effectVape.SetActive(true);
     }
+
+    public void DeActiveCookingPot()
+    {
+        effectVape.SetActive(false);
+    }
 }

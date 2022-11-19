@@ -38,10 +38,13 @@ public class EnemyMover : MonoBehaviour
                 if (_movePointsStart.GetMovePoints.Length - 1 < _pointNumber)
                 {
                     startMove = false;
-                    startRndMove = true;
-
-                    moveRandomPoint = _moveRandomPoints.GetRandomPosition();
-                    targetMove = moveRandomPoint;
+                   
+                    if (_moveRandomPoints != null)
+                    {
+                        moveRandomPoint = _moveRandomPoints.GetRandomPosition();
+                        targetMove = moveRandomPoint;
+                        startRndMove = true;
+                    }
                 }
             }
         }
@@ -61,9 +64,14 @@ public class EnemyMover : MonoBehaviour
     }
 
 
-    public void SetMovePoints(MovePoints pointsStart, MovePoints RandomPoints)
+    public void SetMovePoints(MovePoints pointsStart, MovePoints RandomPoints = null)
     {
         _movePointsStart = pointsStart;
         _moveRandomPoints = RandomPoints;
+    }
+
+    public void SetSpeedMove(float speed)
+    {
+        _speed = speed;
     }
 }
