@@ -6,19 +6,19 @@ public class PlitaController : MonoBehaviour
 {
     [SerializeField] private GameObject fireObj;
 
-    private bool isActivePlita = false; 
+    private bool isActivePlita = true; 
     public Pot currentPotOnPlita;
 
     private void Start()
     {
-        fireObj.SetActive(false);
-        Invoke(nameof(ActiveFirePlita), 5f);
+        //fireObj.SetActive(false);
+       // Invoke(nameof(ActiveFirePlita), 5f);
     }
 
     public void ActiveFirePlita()
     {
         isActivePlita = !isActivePlita;
-        fireObj.gameObject.SetActive(isActivePlita);
+        fireObj.SetActive(isActivePlita);
 
         if (isActivePlita && currentPotOnPlita != null)
         {
@@ -31,10 +31,13 @@ public class PlitaController : MonoBehaviour
         if (collision.gameObject.TryGetComponent(out Pot pot))
         {
             currentPotOnPlita = pot;
+
+            if (isActivePlita)
+                currentPotOnPlita.ActiveCookingPot();
         }
     }
 
-    private void OnTriggerExit2D(Collider collision)
+    private void OnTriggerExit(Collider collision)
     {
         if (collision.gameObject.TryGetComponent(out Pot pot))
         {

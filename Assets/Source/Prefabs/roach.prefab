@@ -296,6 +296,8 @@ GameObject:
   - component: {fileID: 2593866873514333157}
   - component: {fileID: 8971974888444824852}
   - component: {fileID: 2279995549002230918}
+  - component: {fileID: 3718936789349382021}
+  - component: {fileID: 2188337398615966868}
   m_Layer: 0
   m_Name: roach
   m_TagString: Untagged
@@ -352,10 +354,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bb518174c22dbb43b590365bcd170d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movePointsStart: {fileID: 0}
-  _moveRandomPoints: {fileID: 0}
   _speed: 0.4
   _rotationAdd: {x: 0, y: 0, z: 0}
+--- !u!114 &3718936789349382021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2933132539848149343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49740314415221245877c179fe493490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dieEffects: {fileID: 1889919486439536, guid: 3fb33178ea886b64e9e849e20465a27c, type: 3}
+--- !u!135 &2188337398615966868
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2933132539848149343}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.008067735
+  m_Center: {x: 0, y: 0.0037270412, z: -0.0051283836}
 --- !u!1 &2953402897245189439
 GameObject:
   m_ObjectHideFlags: 0

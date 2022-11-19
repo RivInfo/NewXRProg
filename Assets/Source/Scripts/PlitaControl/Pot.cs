@@ -9,6 +9,7 @@ public class Pot : MonoBehaviour
     private void Start()
     {
         effectVape.SetActive(false);
+        //Invoke(nameof(ActiveCookingPot), 5f);
     }
 
     public void ActiveCookingPot()
