@@ -12,7 +12,7 @@ public class PlitaController : MonoBehaviour
     private void Start()
     {
         //fireObj.SetActive(false);
-       // Invoke(nameof(ActiveFirePlita), 5f);
+        Invoke(nameof(ActiveFirePlita), 5f);
     }
 
     public void ActiveFirePlita()
@@ -41,6 +41,7 @@ public class PlitaController : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out Pot pot))
         {
+            pot.DeActiveCookingPot();
             currentPotOnPlita = null;
         }
     }
