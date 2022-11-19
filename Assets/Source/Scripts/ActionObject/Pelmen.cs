@@ -2,23 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon : MonoBehaviour
+[RequireComponent(typeof(Collider),typeof(Rigidbody))]
+public class Pelmen : MonoBehaviour
 {
     private bool _isActive = false;
 
     private Collider[] _colliders;
+    private Rigidbody _rigidbody;
 
     private void Start()
     {
         _colliders = GetComponentsInChildren<Collider>();
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (_isActive && other.TryGetComponent(out Enemy enemy))
-        {
-            enemy.TakeHit();
-        }
+        _rigidbody = GetComponent<Rigidbody>();
+        SetColliderTrigger(true);
     }
 
     public void Activate()
@@ -30,6 +26,8 @@ public class Weapon : MonoBehaviour
     public void Dectivate()
     {
         _isActive = false;
+        _rigidbody.isKinematic = false;
+        _rigidbody.useGravity = true;
         SetColliderTrigger(false);
     }
 
