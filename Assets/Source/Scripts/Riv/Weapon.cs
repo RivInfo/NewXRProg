@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Weapon : MonoBehaviour
 {
@@ -19,16 +20,31 @@ public class Weapon : MonoBehaviour
         {
             enemy.TakeHit();
         }
+
+        if(other.TryGetComponent(out XRRayInteractor Interector))
+        {
+            ConsoleTimeLog("Wepon on hand");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.TryGetComponent(out XRRayInteractor Interector))
+        {
+            ConsoleTimeLog("Wepon OUT hand");
+        }
     }
 
     public void Activate()
     {
+        ConsoleTimeLog("Activate");
         _isActive = true;
         SetColliderTrigger(true);
     }
 
     public void Dectivate()
     {
+        ConsoleTimeLog("Dectivate");
         _isActive = false;
         SetColliderTrigger(false);
     }
@@ -39,5 +55,10 @@ public class Weapon : MonoBehaviour
         {
             item.isTrigger = isTrigger;
         }
+    }
+
+    public void ConsoleTimeLog(string messege)
+    {
+        Debug.LogWarning(Time.time +" - " + messege);
     }
 }
