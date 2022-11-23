@@ -12,6 +12,8 @@ public class SpawnerTaracan : MonoBehaviour
     [SerializeField] private MovePoints _movePointsStart;
     [SerializeField] private MovePoints _moveRandomPoints;
 
+    List<Enemy> enemies = new List<Enemy>();
+
     private void Start()
     {
         StartSpawnRoach(countTaracans, 1f);
@@ -40,5 +42,22 @@ public class SpawnerTaracan : MonoBehaviour
     {
         EnemyMover taracan = Instantiate(prefabsTaracan, pos.position, Quaternion.identity);
         taracan.SetMovePoints(_movePointsStart, _moveRandomPoints);
+
+        if(taracan.TryGetComponent(out Enemy enemy))
+        {
+            RegistrateRoach(enemy);
+        }
+    }
+
+    private void RegistrateRoach(Enemy enemy)
+    {
+        enemies.Add(enemy);
+        enemy.Dead += OnDie;
+    }
+
+    private void OnDie(Enemy enemy)
+    {
+        enemies.Remove(enemy);
+        enemy.Dead -= OnDie;
     }
 }
