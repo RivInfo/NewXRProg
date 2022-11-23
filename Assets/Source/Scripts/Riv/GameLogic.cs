@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class GameLogic : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Pot _pot;
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] private SpawnerTaracan _spawnerTaracan;
+
+    private int _gameState = 0;
+
+    private void Start()
     {
         
     }

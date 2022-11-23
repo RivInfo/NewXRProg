@@ -14,19 +14,25 @@ public class SpawnerTaracan : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(CreatesTaracan(testPosCreate, countTaracans));
+        StartSpawnRoach(countTaracans, 1f);
     }
 
-    private IEnumerator CreatesTaracan(Transform positionCreated, int countTarecans)
+    public void StartSpawnRoach(int count, float delay)
+    {
+        StartCoroutine(CreatesTaracan(testPosCreate, count, delay));
+    }
+
+    private IEnumerator CreatesTaracan(Transform positionCreated, int countTarecans, float delay)
     {
         int num = 0;
         int count = countTarecans;
+        WaitForSeconds wait = new WaitForSeconds(delay);
 
         while (num < count)
         {
             num++;
             CreateObjectTaracan(positionCreated);
-            yield return new WaitForSeconds(1f);
+            yield return wait;
         }
     }
 

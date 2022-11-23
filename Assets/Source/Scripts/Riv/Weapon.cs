@@ -11,7 +11,7 @@ public class Weapon : SelectidOnHandObject
 
     private void Start()
     {
-        _colliders = GetComponentsInChildren<Collider>();
+        _colliders = GetComponents<Collider>();
     }
 
     private void OnTriggerEnter(Collider other)
