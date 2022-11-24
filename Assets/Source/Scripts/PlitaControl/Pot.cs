@@ -2,14 +2,27 @@ using System.Collections;
 using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Pot : MonoBehaviour
 {
-    [SerializeField] private GameObject effectVape;
+    [SerializeField] private GameObject _effectVape;
+
+    [SerializeField] private float _heatingSecondsStep = 1;
 
     private List<SwimPelmen> _pelmeni;
 
     private PotPelmenDetector _detector;
+
+    private float _heatingSecondsMax = 60;
+    private float _heatingSecond;
+    private bool _isHeating = false;
+
+    private Coroutine _heating;
+
+    public event UnityAction PotHeating;
+    public event UnityAction PotOnPlita;
+    public event UnityAction<int> PelmenInPot;
 
     private void Start()
     {
@@ -24,7 +37,7 @@ public class Pot : MonoBehaviour
 
         _detector.PelmenInPot += OnPelmenInPot;
 
-        effectVape.SetActive(false);
+        _effectVape.SetActive(false);
     }
 
     private void OnDestroy()
@@ -34,25 +47,49 @@ public class Pot : MonoBehaviour
 
     public void ActiveCookingPot()
     {
-        effectVape.SetActive(true);
+        if (_heating != null)
+            StopCoroutine(_heating);
+        _heating = StartCoroutine(WaterHeating());
+
+        PotOnPlita?.Invoke();
     }
 
     public void DeActiveCookingPot()
     {
-        effectVape.SetActive(false);
+        _effectVape.SetActive(false);
     }
 
     private void OnPelmenInPot(Pelmen arg0)
     {
-        arg0.gameObject.SetActive(false);
-
-        List<SwimPelmen> noActive = _pelmeni.Where(_ => _.isActiveAndEnabled == false).ToList();
-
-        if (noActive.Count > 0)
+        if (_isHeating)
         {
-            noActive[Random.Range(0, noActive.Count)].gameObject.SetActive(true);
+            arg0.gameObject.SetActive(false);
+
+            List<SwimPelmen> noActive = _pelmeni.Where(_ => _.isActiveAndEnabled == false).ToList();
+
+            if (noActive.Count > 0)
+            {
+                arg0.gameObject.SetActive(false);
+                noActive[Random.Range(0, noActive.Count)].gameObject.SetActive(true);
+
+                PelmenInPot?.Invoke(_pelmeni.Count - noActive.Count);
+            }
         }
     }
 
-    //private IEnumerator Smoo
+    private IEnumerator WaterHeating()
+    {
+        WaitForSeconds seconds = new WaitForSeconds(_heatingSecondsStep);
+
+        while(_heatingSecond < _heatingSecondsMax)
+        {
+            _heatingSecond += _heatingSecondsStep;
+            yield return seconds;
+        }
+        _isHeating = true;
+
+        _effectVape.SetActive(true);
+
+        PotHeating?.Invoke();
+    }
 }

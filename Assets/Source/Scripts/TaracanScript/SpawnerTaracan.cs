@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SpawnerTaracan : MonoBehaviour
 {
@@ -14,9 +15,11 @@ public class SpawnerTaracan : MonoBehaviour
 
     List<Enemy> enemies = new List<Enemy>();
 
+    public event UnityAction AllRoachDie;
+
     private void Start()
     {
-        StartSpawnRoach(countTaracans, 1f);
+        //StartSpawnRoach(countTaracans, 1f);
     }
 
     public void StartSpawnRoach(int count, float delay)
@@ -59,5 +62,10 @@ public class SpawnerTaracan : MonoBehaviour
     {
         enemies.Remove(enemy);
         enemy.Dead -= OnDie;
+
+        if (enemies.Count == 0)
+        {
+            AllRoachDie?.Invoke();
+        }
     }
 }
