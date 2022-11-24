@@ -5,6 +5,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Weapon : SelectidOnHandObject
 {
+    [SerializeField] private AudioSource _audioSource;
+
     private bool _isActive = false;
 
     private Collider[] _colliders;
@@ -19,6 +21,9 @@ public class Weapon : SelectidOnHandObject
         if (_isActive && other.TryGetComponent(out Enemy enemy))
         {
             enemy.TakeHit();
+            if(_audioSource!= null)
+                if(_audioSource.clip != null)
+                    _audioSource.Play();
         }
     }
 
