@@ -9,12 +9,12 @@ public class Pot : MonoBehaviour
     [SerializeField] private GameObject _effectVape;
 
     [SerializeField] private float _heatingSecondsStep = 1;
+    [SerializeField] private float _heatingSecondsMax = 60;
 
     private List<SwimPelmen> _pelmeni;
 
     private PotPelmenDetector _detector;
 
-    private float _heatingSecondsMax = 60;
     private float _heatingSecond;
     private bool _isHeating = false;
 
@@ -72,7 +72,7 @@ public class Pot : MonoBehaviour
                 arg0.gameObject.SetActive(false);
                 noActive[Random.Range(0, noActive.Count)].gameObject.SetActive(true);
 
-                PelmenInPot?.Invoke(_pelmeni.Count - noActive.Count);
+                PelmenInPot?.Invoke(_pelmeni.Count - noActive.Count+1);
             }
         }
     }
