@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class Pot : MonoBehaviour
 {
     [SerializeField] private GameObject _effectVape;
+    [SerializeField] private GameObject _effectSmallVape;
 
     [SerializeField] private float _heatingSecondsStep = 1;
     [SerializeField] private float _heatingSecondsMax = 60;
@@ -38,6 +39,7 @@ public class Pot : MonoBehaviour
         _detector.PelmenInPot += OnPelmenInPot;
 
         _effectVape.SetActive(false);
+        _effectSmallVape.SetActive(false);
     }
 
     private void OnDestroy()
@@ -50,6 +52,7 @@ public class Pot : MonoBehaviour
         if (_heating != null)
             StopCoroutine(_heating);
         _heating = StartCoroutine(WaterHeating());
+        _effectSmallVape.SetActive(true);
 
         PotOnPlita?.Invoke();
     }
@@ -57,6 +60,7 @@ public class Pot : MonoBehaviour
     public void DeActiveCookingPot()
     {
         _effectVape.SetActive(false);
+        _effectSmallVape.SetActive(false);
     }
 
     private void OnPelmenInPot(Pelmen arg0)
@@ -89,6 +93,7 @@ public class Pot : MonoBehaviour
         _isHeating = true;
 
         _effectVape.SetActive(true);
+        _effectSmallVape.SetActive(false);
 
         PotHeating?.Invoke();
     }
