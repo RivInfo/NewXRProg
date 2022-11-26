@@ -3342,9 +3342,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 479986630}
-  m_LocalRotation: {x: 0.691409, y: 0.0000000074505797, z: -0.011671568, w: 0.7223694}
-  m_LocalPosition: {x: -2.2030003, y: 1.65, z: -0.4299991}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.69140893, y: 0.0000000074505797, z: -0.011671568, w: 0.7223694}
+  m_LocalPosition: {x: -2.2030008, y: 1.65, z: -0.42999923}
+  m_LocalScale: {x: 1.0000001, y: 0.9999999, z: 1.0000002}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1400859966}
@@ -3501,10 +3501,10 @@ MonoBehaviour:
   m_PositionAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Position
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 99f659d9-5a23-4fa5-a18a-6644e6fd754d
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3513,10 +3513,10 @@ MonoBehaviour:
   m_RotationAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Rotation
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 02698a10-88a6-4b01-998c-956e4f3de693
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3525,10 +3525,10 @@ MonoBehaviour:
   m_TrackingStateAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Tracking State
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: d4b0b1ef-8d07-47cb-b388-e6408a044ec5
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3537,10 +3537,10 @@ MonoBehaviour:
   m_SelectAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Select
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 41fefb2a-77da-44a6-a683-d8606ed25701
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3549,10 +3549,10 @@ MonoBehaviour:
   m_SelectActionValue:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Select Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 3ae66aa8-72f7-46f4-8322-313ba51eec9d
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3561,10 +3561,10 @@ MonoBehaviour:
   m_ActivateAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Activate
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: bc40b741-bd3d-41cc-837e-98c641c7d407
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3573,10 +3573,10 @@ MonoBehaviour:
   m_ActivateActionValue:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Activate Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 8722149f-9d0e-44b2-bd39-88bebdff2a06
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3585,10 +3585,10 @@ MonoBehaviour:
   m_UIPressAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: UI Press
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 750e456d-92b6-4bd5-9b5e-fc411453bc26
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3597,10 +3597,10 @@ MonoBehaviour:
   m_UIPressActionValue:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: UI Press Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 0481775a-c6c8-4178-983a-d0071f1edc88
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3609,10 +3609,10 @@ MonoBehaviour:
   m_HapticDeviceAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Haptic Device
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: dc2bdaf5-e1f9-4e79-93f9-a89b433d8485
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3621,10 +3621,10 @@ MonoBehaviour:
   m_RotateAnchorAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Rotate Anchor
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 2f3c05be-d6ef-46c9-befb-361cf9ee15c7
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3633,10 +3633,10 @@ MonoBehaviour:
   m_TranslateAnchorAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Translate Anchor
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: c33d1cef-b727-45b0-8149-2ecf442c398a
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3780,8 +3780,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 541645153}
-  m_LocalRotation: {x: -0.13988107, y: -0.00835656, z: 0.001180574, w: 0.9901324}
-  m_LocalPosition: {x: 8.873, y: 2.085, z: -17.808}
+  m_LocalRotation: {x: -0.020688523, y: 0.75290704, z: 0.6570901, w: 0.030587463}
+  m_LocalPosition: {x: 9.684, y: 1.061, z: -19.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3790,7 +3790,7 @@ Transform:
   - {fileID: 1232424401}
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -16.08, y: -1.006, z: 0.279}
+  m_LocalEulerAnglesHint: {x: -82.189, y: 172.019, z: 3.816}
 --- !u!1001 &545023473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8083,10 +8083,10 @@ MonoBehaviour:
   m_PositionAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Position
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 27bd934d-0737-446a-a1be-50366aa3d392
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8095,10 +8095,10 @@ MonoBehaviour:
   m_RotationAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Rotation
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 1bb20f55-b3c3-4b13-b569-670cc55df2bf
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8107,10 +8107,10 @@ MonoBehaviour:
   m_TrackingStateAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Tracking State
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 05abc14b-59fa-404c-93d9-b33834bcd113
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8119,10 +8119,10 @@ MonoBehaviour:
   m_SelectAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Select
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 321f67ef-9f34-4e27-8481-1b493a4abab8
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8131,10 +8131,10 @@ MonoBehaviour:
   m_SelectActionValue:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Select Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 4483cf45-97e4-4a7e-a847-a2e606bef38f
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8143,10 +8143,10 @@ MonoBehaviour:
   m_ActivateAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Activate
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: a977f2a5-dd87-40be-b584-6d2334983097
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8155,10 +8155,10 @@ MonoBehaviour:
   m_ActivateActionValue:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Activate Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 65cc230d-e73a-452b-835f-752ccba7c84a
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8167,10 +8167,10 @@ MonoBehaviour:
   m_UIPressAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: UI Press
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 14a9115d-dc38-41d7-b655-0e0fc13cab9c
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8179,10 +8179,10 @@ MonoBehaviour:
   m_UIPressActionValue:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: UI Press Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 787497a1-c85e-4d09-b777-9cfc059b4b6b
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8191,10 +8191,10 @@ MonoBehaviour:
   m_HapticDeviceAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Haptic Device
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: a05c1d5d-261a-432c-949f-9d820e097302
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8203,10 +8203,10 @@ MonoBehaviour:
   m_RotateAnchorAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Rotate Anchor
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: c31f4640-8cd9-4033-96bc-83ca2fad2634
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8215,10 +8215,10 @@ MonoBehaviour:
   m_TranslateAnchorAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Translate Anchor
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 3d708699-c9b7-439a-8c42-3b02c8d00eca
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -11179,6 +11179,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4459748c40bc0c84a9fac664b9eeb831, type: 3}
   m_PrefabInstance: {fileID: 1662743539}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1666202384 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 532821291167979595, guid: efd3ae01b18814e8080b7eaa82fffbb4, type: 3}
+  m_PrefabInstance: {fileID: 532821291749942107}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1667563592
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13645,6 +13650,63 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.70000035, y: 0.7480727, z: 1.0147649}
   m_Center: {x: 0, y: -0.00061485363, z: 0.5073825}
+--- !u!1001 &532821291749942107
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 532821291167979595, guid: efd3ae01b18814e8080b7eaa82fffbb4, type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 532821291167979595, guid: efd3ae01b18814e8080b7eaa82fffbb4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.864
+      objectReference: {fileID: 0}
+    - target: {fileID: 532821291167979595, guid: efd3ae01b18814e8080b7eaa82fffbb4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.117
+      objectReference: {fileID: 0}
+    - target: {fileID: 532821291167979595, guid: efd3ae01b18814e8080b7eaa82fffbb4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -19.426
+      objectReference: {fileID: 0}
+    - target: {fileID: 532821291167979595, guid: efd3ae01b18814e8080b7eaa82fffbb4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 532821291167979595, guid: efd3ae01b18814e8080b7eaa82fffbb4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 532821291167979595, guid: efd3ae01b18814e8080b7eaa82fffbb4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 532821291167979595, guid: efd3ae01b18814e8080b7eaa82fffbb4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 532821291167979595, guid: efd3ae01b18814e8080b7eaa82fffbb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 532821291167979595, guid: efd3ae01b18814e8080b7eaa82fffbb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 532821291167979595, guid: efd3ae01b18814e8080b7eaa82fffbb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 532821291167979604, guid: efd3ae01b18814e8080b7eaa82fffbb4, type: 3}
+      propertyPath: m_Name
+      value: PointCreateCrab
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: efd3ae01b18814e8080b7eaa82fffbb4, type: 3}
 --- !u!4 &543450652959342589 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7555362586089937776, guid: bc042e752642f427da0fb21cb100a5ae, type: 3}
@@ -13803,6 +13865,67 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba788730600cdf141a6626f3ad240202, type: 3}
+--- !u!1001 &3266451013239455261
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3266451012305106720, guid: 7f5e522afb2f548a5b328a3471df5dd6, type: 3}
+      propertyPath: positionStart
+      value: 
+      objectReference: {fileID: 1666202384}
+    - target: {fileID: 3266451012305106726, guid: 7f5e522afb2f548a5b328a3471df5dd6, type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266451012305106726, guid: 7f5e522afb2f548a5b328a3471df5dd6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.792
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266451012305106726, guid: 7f5e522afb2f548a5b328a3471df5dd6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.743
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266451012305106726, guid: 7f5e522afb2f548a5b328a3471df5dd6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -18.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266451012305106726, guid: 7f5e522afb2f548a5b328a3471df5dd6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266451012305106726, guid: 7f5e522afb2f548a5b328a3471df5dd6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266451012305106726, guid: 7f5e522afb2f548a5b328a3471df5dd6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266451012305106726, guid: 7f5e522afb2f548a5b328a3471df5dd6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266451012305106726, guid: 7f5e522afb2f548a5b328a3471df5dd6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266451012305106726, guid: 7f5e522afb2f548a5b328a3471df5dd6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266451012305106726, guid: 7f5e522afb2f548a5b328a3471df5dd6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266451012305106730, guid: 7f5e522afb2f548a5b328a3471df5dd6, type: 3}
+      propertyPath: m_Name
+      value: TriggerCrab
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7f5e522afb2f548a5b328a3471df5dd6, type: 3}
 --- !u!1001 &5938909923467683937
 PrefabInstance:
   m_ObjectHideFlags: 0
