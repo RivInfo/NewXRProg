@@ -3342,9 +3342,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 479986630}
-  m_LocalRotation: {x: 0.691409, y: 0.0000000074505797, z: -0.011671568, w: 0.7223694}
-  m_LocalPosition: {x: -2.2030003, y: 1.65, z: -0.4299991}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.69140893, y: 0.0000000074505797, z: -0.011671568, w: 0.7223694}
+  m_LocalPosition: {x: -2.2030008, y: 1.65, z: -0.42999923}
+  m_LocalScale: {x: 1.0000001, y: 0.9999999, z: 1.0000002}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1400859966}
@@ -3501,10 +3501,10 @@ MonoBehaviour:
   m_PositionAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Position
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 99f659d9-5a23-4fa5-a18a-6644e6fd754d
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3513,10 +3513,10 @@ MonoBehaviour:
   m_RotationAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Rotation
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 02698a10-88a6-4b01-998c-956e4f3de693
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3525,10 +3525,10 @@ MonoBehaviour:
   m_TrackingStateAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Tracking State
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: d4b0b1ef-8d07-47cb-b388-e6408a044ec5
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3537,10 +3537,10 @@ MonoBehaviour:
   m_SelectAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Select
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 41fefb2a-77da-44a6-a683-d8606ed25701
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3549,10 +3549,10 @@ MonoBehaviour:
   m_SelectActionValue:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Select Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 3ae66aa8-72f7-46f4-8322-313ba51eec9d
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3561,10 +3561,10 @@ MonoBehaviour:
   m_ActivateAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Activate
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: bc40b741-bd3d-41cc-837e-98c641c7d407
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3573,10 +3573,10 @@ MonoBehaviour:
   m_ActivateActionValue:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Activate Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 8722149f-9d0e-44b2-bd39-88bebdff2a06
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3585,10 +3585,10 @@ MonoBehaviour:
   m_UIPressAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: UI Press
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 750e456d-92b6-4bd5-9b5e-fc411453bc26
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3597,10 +3597,10 @@ MonoBehaviour:
   m_UIPressActionValue:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: UI Press Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 0481775a-c6c8-4178-983a-d0071f1edc88
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3609,10 +3609,10 @@ MonoBehaviour:
   m_HapticDeviceAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Haptic Device
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: dc2bdaf5-e1f9-4e79-93f9-a89b433d8485
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3621,10 +3621,10 @@ MonoBehaviour:
   m_RotateAnchorAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Rotate Anchor
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 2f3c05be-d6ef-46c9-befb-361cf9ee15c7
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3633,10 +3633,10 @@ MonoBehaviour:
   m_TranslateAnchorAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Translate Anchor
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: c33d1cef-b727-45b0-8149-2ecf442c398a
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3780,8 +3780,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 541645153}
-  m_LocalRotation: {x: -0.13988107, y: -0.00835656, z: 0.001180574, w: 0.9901324}
-  m_LocalPosition: {x: 8.873, y: 2.085, z: -17.808}
+  m_LocalRotation: {x: -0.020688523, y: 0.75290704, z: 0.6570901, w: 0.030587463}
+  m_LocalPosition: {x: 9.684, y: 1.061, z: -19.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3790,7 +3790,7 @@ Transform:
   - {fileID: 1232424401}
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -16.08, y: -1.006, z: 0.279}
+  m_LocalEulerAnglesHint: {x: -82.189, y: 172.019, z: 3.816}
 --- !u!1001 &545023473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7933,6 +7933,83 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4944102135447920, guid: ea0b3a53d51d3f94a9b82aff7983c608, type: 3}
   m_PrefabInstance: {fileID: 1214358219}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1223887159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1223887163}
+  - component: {fileID: 1223887160}
+  - component: {fileID: 1223887164}
+  - component: {fileID: 1223887165}
+  m_Layer: 0
+  m_Name: TriggerCrab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1223887160
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223887159}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1223887163
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223887159}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.792, y: 0.743, z: -18.71}
+  m_LocalScale: {x: 1.162379, y: 1.4251785, z: 0.3541654}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1223887164
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223887159}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1223887165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223887159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b32469f2ccfd6451bb878cfa43fd1242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabCrab: {fileID: 1246660782169465149, guid: 5659dc32538524c348d29a144b7ab986, type: 3}
+  positionStart: {fileID: 1666202384}
 --- !u!1 &1232424400
 GameObject:
   m_ObjectHideFlags: 0
@@ -8083,10 +8160,10 @@ MonoBehaviour:
   m_PositionAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Position
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 27bd934d-0737-446a-a1be-50366aa3d392
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8095,10 +8172,10 @@ MonoBehaviour:
   m_RotationAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Rotation
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 1bb20f55-b3c3-4b13-b569-670cc55df2bf
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8107,10 +8184,10 @@ MonoBehaviour:
   m_TrackingStateAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Tracking State
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 05abc14b-59fa-404c-93d9-b33834bcd113
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8119,10 +8196,10 @@ MonoBehaviour:
   m_SelectAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Select
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 321f67ef-9f34-4e27-8481-1b493a4abab8
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8131,10 +8208,10 @@ MonoBehaviour:
   m_SelectActionValue:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Select Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 4483cf45-97e4-4a7e-a847-a2e606bef38f
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8143,10 +8220,10 @@ MonoBehaviour:
   m_ActivateAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Activate
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: a977f2a5-dd87-40be-b584-6d2334983097
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8155,10 +8232,10 @@ MonoBehaviour:
   m_ActivateActionValue:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Activate Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 65cc230d-e73a-452b-835f-752ccba7c84a
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8167,10 +8244,10 @@ MonoBehaviour:
   m_UIPressAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: UI Press
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 14a9115d-dc38-41d7-b655-0e0fc13cab9c
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8179,10 +8256,10 @@ MonoBehaviour:
   m_UIPressActionValue:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: UI Press Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 787497a1-c85e-4d09-b777-9cfc059b4b6b
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8191,10 +8268,10 @@ MonoBehaviour:
   m_HapticDeviceAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Haptic Device
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: a05c1d5d-261a-432c-949f-9d820e097302
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8203,10 +8280,10 @@ MonoBehaviour:
   m_RotateAnchorAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Rotate Anchor
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: c31f4640-8cd9-4033-96bc-83ca2fad2634
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -8215,10 +8292,10 @@ MonoBehaviour:
   m_TranslateAnchorAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Translate Anchor
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 3d708699-c9b7-439a-8c42-3b02c8d00eca
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -11179,6 +11256,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4459748c40bc0c84a9fac664b9eeb831, type: 3}
   m_PrefabInstance: {fileID: 1662743539}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1666202383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1666202384}
+  m_Layer: 0
+  m_Name: PointCreateCrab
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1666202384
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666202383}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.864, y: 0.117, z: -19.426}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1667563592
 PrefabInstance:
   m_ObjectHideFlags: 0
