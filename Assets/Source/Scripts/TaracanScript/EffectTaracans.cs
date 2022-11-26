@@ -12,21 +12,21 @@ public class EffectTaracans : MonoBehaviour
     [SerializeField] private MovePoints[] _movePointsStart;
 
     private int index = 1;
-
-    private void Start()
-    {
-        StartEffectRunTaracans();
-    }
+    private bool _firstActivation;
 
     public void StartEffectRunTaracans()
     {
-        int num = 0;
-        int count = countTaracans;
-
-        while (num < count)
+        if (!_firstActivation)
         {
-            num++;
-            OnlyEffectTaracans();
+            int num = 0;
+            int count = countTaracans;
+
+            while (num < count)
+            {
+                num++;
+                OnlyEffectTaracans();
+            }
+            _firstActivation = true;
         }
     }
 

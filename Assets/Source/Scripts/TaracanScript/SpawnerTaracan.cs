@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SpawnerTaracan : MonoBehaviour
 {
@@ -12,21 +13,31 @@ public class SpawnerTaracan : MonoBehaviour
     [SerializeField] private MovePoints _movePointsStart;
     [SerializeField] private MovePoints _moveRandomPoints;
 
-    private void Start()
+    List<Enemy> enemies = new List<Enemy>();
+
+    public event UnityAction AllRoachDie;
+    public event UnityAction<int> RochKillCount;
+
+    public int CurrenMaxRoch { get; private set; }
+
+    public void StartSpawnRoach(int count, float delay)
     {
-        StartCoroutine(CreatesTaracan(testPosCreate, countTaracans));
+        StartCoroutine(CreatesTaracan(testPosCreate, count, delay));
+
+        CurrenMaxRoch = count + enemies.Count;
     }
 
-    private IEnumerator CreatesTaracan(Transform positionCreated, int countTarecans)
+    private IEnumerator CreatesTaracan(Transform positionCreated, int countTarecans, float delay)
     {
         int num = 0;
         int count = countTarecans;
+        WaitForSeconds wait = new WaitForSeconds(delay);
 
         while (num < count)
         {
             num++;
             CreateObjectTaracan(positionCreated);
-            yield return new WaitForSeconds(1f);
+            yield return wait;
         }
     }
 
@@ -34,5 +45,27 @@ public class SpawnerTaracan : MonoBehaviour
     {
         EnemyMover taracan = Instantiate(prefabsTaracan, pos.position, Quaternion.identity);
         taracan.SetMovePoints(_movePointsStart, _moveRandomPoints);
+
+        if(taracan.TryGetComponent(out Enemy enemy))
+        {
+            RegistrateRoach(enemy);
+        }
+    }
+
+    private void RegistrateRoach(Enemy enemy)
+    {
+        enemies.Add(enemy);
+        enemy.Dead += OnDie;
+    }
+
+    private void OnDie(Enemy enemy)
+    {
+        enemies.Remove(enemy);
+        enemy.Dead -= OnDie;
+
+        if (enemies.Count == 0)
+        {
+            AllRoachDie?.Invoke();
+        }
     }
 }
