@@ -19,7 +19,7 @@ public class GameLogic : MonoBehaviour
 
     [SerializeField] private SpawnerTaracan _spawnerTaracan;
 
-    private int _gameState = 0;
+    private GameStates _gameState = 0;
 
     private void Start()
     {
@@ -36,10 +36,12 @@ public class GameLogic : MonoBehaviour
     {
         if(_gameState == 0)
         {
-            _gameState = 1;
+            _gameState = GameStates.PelmenInPot;
             _spawnerTaracan.StartSpawnRoach(_roachCountOne, _spawnDelayOne);
 
             Debug.LogWarning("geme state - " + _gameState);
+
+            VRSubtatile.Instance.ShowSubtitle("Тараканы атакуют!");
         }
     }
 
@@ -50,18 +52,20 @@ public class GameLogic : MonoBehaviour
 
     private void OnPelmenInPot(int count)
     {
-        if(_gameState == 1 && count >= _pelmenCountFromStateUp)
+        if(_gameState == GameStates.PelmenInPot && count >= _pelmenCountFromStateUp)
         {
-            _gameState = 2;
+            _gameState = GameStates.KillTaracansTwo;
             _spawnerTaracan.StartSpawnRoach(_roachCountTwo, _spawnDelayTwo);
             Debug.LogWarning("geme state - " + _gameState);
 
+            VRSubtatile.Instance.ShowSubtitle("Тараканы опять идут в бой!");
         }
     }
 
     private void OnPotHeating()
     {
-        //пора закинуть пельмени
+        //пора закинуть пельмени/ может вызываться повторно 
+        VRSubtatile.Instance.ShowSubtitle("Пора закинуть пельмени");
     }
 
     private void OnDestroy()
@@ -72,4 +76,13 @@ public class GameLogic : MonoBehaviour
 
         _spawnerTaracan.AllRoachDie -= OnAllRoachDie;
     }
+}
+
+public enum GameStates
+{
+    NeedPotHeating,
+    KillTaracansOne,
+    PelmenInPot,
+    KillTaracansTwo,
+    End
 }

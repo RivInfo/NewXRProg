@@ -16,6 +16,9 @@ public class SpawnerTaracan : MonoBehaviour
     List<Enemy> enemies = new List<Enemy>();
 
     public event UnityAction AllRoachDie;
+    public event UnityAction<int> RochKillCount;
+
+    public int CurrenMaxRoch { get; private set; }
 
     private void Start()
     {

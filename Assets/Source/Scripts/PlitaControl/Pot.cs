@@ -52,6 +52,7 @@ public class Pot : MonoBehaviour
         if (_heating != null)
             StopCoroutine(_heating);
         _heating = StartCoroutine(WaterHeating());
+
         _effectSmallVape.SetActive(true);
 
         PotOnPlita?.Invoke();
