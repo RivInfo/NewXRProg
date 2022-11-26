@@ -20,14 +20,11 @@ public class SpawnerTaracan : MonoBehaviour
 
     public int CurrenMaxRoch { get; private set; }
 
-    private void Start()
-    {
-        //StartSpawnRoach(countTaracans, 1f);
-    }
-
     public void StartSpawnRoach(int count, float delay)
     {
         StartCoroutine(CreatesTaracan(testPosCreate, count, delay));
+
+        CurrenMaxRoch = count + enemies.Count;
     }
 
     private IEnumerator CreatesTaracan(Transform positionCreated, int countTarecans, float delay)
