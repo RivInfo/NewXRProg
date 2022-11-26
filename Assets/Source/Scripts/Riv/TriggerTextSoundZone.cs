@@ -11,6 +11,8 @@ public class TriggerTextSoundZone : MonoBehaviour
 
     [SerializeField] AudioClip _subtitleClip;
 
+    [SerializeField] private float _duration = 0;
+
     private bool _firstUse = false;
 
     private void OnTriggerEnter(Collider other)
@@ -25,7 +27,7 @@ public class TriggerTextSoundZone : MonoBehaviour
     {
         if (!_firstUse)
         {
-            VRSubtatile.Instance.ShowSubtitle(_subtitleText);
+            VRSubtatile.Instance.ShowSubtitle(_subtitleText, _duration);
 
             if (_subtitleClip != null)
                 PlayerAudio.Instance.PlayClip(_subtitleClip);

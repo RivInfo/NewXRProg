@@ -308,6 +308,7 @@ GameObject:
   - component: {fileID: 24131665}
   - component: {fileID: 24131664}
   - component: {fileID: 24131663}
+  - component: {fileID: 24131666}
   - component: {fileID: 24131662}
   m_Layer: 5
   m_Name: CanvasCounter
@@ -398,6 +399,20 @@ RectTransform:
   m_AnchoredPosition: {x: 5.86, y: 1.71}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &24131666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24131661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737b2f5fb89bb2944aef3700364d8e9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 547414877}
+  _spawner: {fileID: 1024718219}
 --- !u!1001 &42575618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4688,6 +4703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _subtitleText: "\u041E\u043F\u044F\u0442\u044C \u044D\u0442\u0438 \u0422\u0410\u0420\u0410\u041A\u0410\u041D\u042B!"
   _subtitleClip: {fileID: 8300000, guid: ae4b83576452bed4680ec4d429489f48, type: 3}
+  _duration: 0
 --- !u!65 &401177687
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5931,7 +5947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: aa7180e00b8e7e6429ffbf7e8cef6603, type: 2}
+  m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -7168,6 +7184,7 @@ MonoBehaviour:
     \u043E\u0441\u043E\u0431\u044B\u0439 \u0430\u043A\u0446\u0435\u043D\u0442 \u043F\u0440\u0438
     \u0437\u0430\u0441\u0435\u043B\u0435\u043D\u0438\u0438."
   _subtitleClip: {fileID: 0}
+  _duration: 0
 --- !u!65 &683810110
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12432,6 +12449,7 @@ MonoBehaviour:
   _spawnDelayTwo: 1
   _pot: {fileID: 1535291398}
   _spawnerTaracan: {fileID: 1024718219}
+  _rouchCounter: {fileID: 24131666}
 --- !u!4 &994758848
 Transform:
   m_ObjectHideFlags: 0
@@ -17194,6 +17212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _subtitleText: "\u041D\u0443\u0436\u043D\u043E \u043F\u043E\u0435\u0441\u0442\u044C."
   _subtitleClip: {fileID: 8300000, guid: bac5c3812355a5548991c0065d3a5b37, type: 3}
+  _duration: 5
 --- !u!65 &1406825595
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17459,6 +17478,7 @@ MonoBehaviour:
   _subtitleText: "\u041D\u0443\u0436\u043D\u043E \u043F\u043E\u0441\u0442\u0430\u0432\u0438\u0442\u044C
     \u0433\u0440\u0435\u0442\u044C\u0441\u044F \u0432\u043E\u0434\u0443"
   _subtitleClip: {fileID: 0}
+  _duration: 0
 --- !u!65 &1421745255
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19516,10 +19536,10 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 20
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 6
+  MaxDistance: 14
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -19529,28 +19549,37 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.16666667
+      time: 0.071428575
       value: 1
-      inSlope: -6.002399
-      outSlope: -6.002399
+      inSlope: -14.005618
+      outSlope: -14.005618
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.33333334
+      time: 0.14285715
       value: 0.5
-      inSlope: -1.5005997
-      outSlope: -1.5005997
+      inSlope: -3.5014045
+      outSlope: -3.5014045
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.6666667
+      time: 0.2857143
       value: 0.25
-      inSlope: -0.37514994
-      outSlope: -0.37514994
+      inSlope: -0.87535113
+      outSlope: -0.87535113
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5714286
+      value: 0.125
+      inSlope: -0.21883778
+      outSlope: -0.21883778
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -19558,11 +19587,11 @@ AudioSource:
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: -1.5194532
-      outSlope: -1.5194532
+      inSlope: -0.07145703
+      outSlope: -0.07145703
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.2511281
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -23118,6 +23147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _subtitleText: "\u0427\u0442\u043E-\u0442\u043E \u0441\u0432\u0435\u0442 \u0431\u0430\u0440\u0430\u0445\u043B\u0438\u0442"
   _subtitleClip: {fileID: 8300000, guid: 4e96a326ba2e72441ae2fbfab4d4966f, type: 3}
+  _duration: 0
 --- !u!65 &1907478464
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -19,6 +19,8 @@ public class GameLogic : MonoBehaviour
 
     [SerializeField] private SpawnerTaracan _spawnerTaracan;
 
+    [SerializeField] private RouchCounter _rouchCounter;
+
     private GameStates _gameState = 0;
 
     private void Start()
@@ -37,7 +39,9 @@ public class GameLogic : MonoBehaviour
         if(_gameState == 0)
         {
             _gameState = GameStates.PelmenInPot;
+
             _spawnerTaracan.StartSpawnRoach(_roachCountOne, _spawnDelayOne);
+            _rouchCounter.CounterActivated();
 
             Debug.LogWarning("geme state - " + _gameState);
 
@@ -55,7 +59,9 @@ public class GameLogic : MonoBehaviour
         if(_gameState == GameStates.PelmenInPot && count >= _pelmenCountFromStateUp)
         {
             _gameState = GameStates.KillTaracansTwo;
+
             _spawnerTaracan.StartSpawnRoach(_roachCountTwo, _spawnDelayTwo);
+            _rouchCounter.CounterActivated();
             Debug.LogWarning("geme state - " + _gameState);
 
             VRSubtatile.Instance.ShowSubtitle("Тараканы опять идут в бой!");

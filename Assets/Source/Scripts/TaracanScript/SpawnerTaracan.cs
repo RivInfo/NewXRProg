@@ -13,7 +13,8 @@ public class SpawnerTaracan : MonoBehaviour
     [SerializeField] private MovePoints _movePointsStart;
     [SerializeField] private MovePoints _moveRandomPoints;
 
-    List<Enemy> enemies = new List<Enemy>();
+    private List<Enemy> enemies = new List<Enemy>();
+    private int _killCount = 0;
 
     public event UnityAction AllRoachDie;
     public event UnityAction<int> RochKillCount;
@@ -22,9 +23,11 @@ public class SpawnerTaracan : MonoBehaviour
 
     public void StartSpawnRoach(int count, float delay)
     {
-        StartCoroutine(CreatesTaracan(testPosCreate, count, delay));
-
         CurrenMaxRoch = count + enemies.Count;
+        _killCount = 0;
+        RochKillCount?.Invoke(_killCount);
+
+        StartCoroutine(CreatesTaracan(testPosCreate, count, delay));
     }
 
     private IEnumerator CreatesTaracan(Transform positionCreated, int countTarecans, float delay)
@@ -62,6 +65,8 @@ public class SpawnerTaracan : MonoBehaviour
     {
         enemies.Remove(enemy);
         enemy.Dead -= OnDie;
+        _killCount++;
+        RochKillCount?.Invoke(_killCount);
 
         if (enemies.Count == 0)
         {
