@@ -9,15 +9,25 @@ public class PositionatCanvasOnVr : MonoBehaviour
     [SerializeField] private Vector3 _addRotation;
     [SerializeField] private float _distance;
 
+    [SerializeField] private bool _useY = false;
+    [SerializeField] private bool _useCameraWarldUp = false;
+
     public void PlaceCanvas()
     {
         Vector3 forvardV = _trackCamera.transform.forward;
-        forvardV.y = 0;
+        if(!_useY)
+            forvardV.y = 0;
+
         forvardV = forvardV.normalized;
 
-        transform.position = _trackCamera.transform.position+forvardV*_distance+_offset;
-        
-        transform.LookAt(_trackCamera.transform);
+        transform.position = _trackCamera.transform.position + forvardV * _distance; //+ _offset;
+
+
+        if (_useCameraWarldUp)
+            transform.LookAt(_trackCamera.transform, _trackCamera.transform.up);
+        else
+            transform.LookAt(_trackCamera.transform);
+
         transform.rotation *= Quaternion.Euler(_addRotation);
         
         //Vector3 rO = transform.rotation.eulerAngles;

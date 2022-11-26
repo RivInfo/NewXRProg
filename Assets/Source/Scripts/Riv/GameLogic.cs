@@ -27,6 +27,8 @@ public class GameLogic : MonoBehaviour
         _pot.PelmenInPot += OnPelmenInPot;
         _pot.PotOnPlita += PotOnPlita;
 
+        _spawnerTaracan.StartSpawnRoach(2, 0);
+
         _spawnerTaracan.AllRoachDie += OnAllRoachDie; 
     }
 
