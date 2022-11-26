@@ -64,6 +64,19 @@ public class Pot : MonoBehaviour
         _effectSmallVape.SetActive(false);
     }
 
+    public void MomentumHaiting()
+    {
+        if (!_isHeating)
+        {
+            if (_heating != null)
+                StopCoroutine(_heating);
+
+            WaterHot();
+
+            _heatingSecond = _heatingSecondsMax;
+        }
+    }
+
     private void OnPelmenInPot(Pelmen arg0)
     {
         if (_isHeating)
@@ -91,6 +104,11 @@ public class Pot : MonoBehaviour
             _heatingSecond += _heatingSecondsStep;
             yield return seconds;
         }
+        WaterHot();
+    }
+
+    private void WaterHot()
+    {
         _isHeating = true;
 
         _effectVape.SetActive(true);

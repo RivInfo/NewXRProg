@@ -4,27 +4,39 @@ using UnityEngine;
 
 public class CrabEndGame : MonoBehaviour
 {
-    [SerializeField] private Transform target;
+    [SerializeField] private Transform _target;
 
-    [SerializeField] private float speedJump;
-    private bool isMove = false;
+    [SerializeField] private float _speedJump;
+    [SerializeField] private float _speedLerp = 0.25f;
 
-    private void Start()
-    {
-        Invoke(nameof(JumpToPlayer), 1f);
-    }
+    private bool _isMove = false;
 
     public void JumpToPlayer()
     {
-        isMove = true;
+        Invoke(nameof(StartMove), 0.7f);       
+    }
+
+    private void StartMove()
+    {
+        _isMove = true;
     }
 
     private void Update()
     {
-        if (isMove)
+        if (_isMove)
         {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(target.position.x, target.position.y, target.position.z - 0.335f), Time.deltaTime * speedJump);
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(-180, 0, 0), Time.deltaTime * speedJump);
+            transform.position = Vector3.MoveTowards(transform.position, 
+                new Vector3(_target.position.x, _target.position.y, _target.position.z), 
+                Time.deltaTime * _speedJump);
+            transform.rotation = 
+                Quaternion.Lerp(transform.rotation, Quaternion.Euler(_target.eulerAngles),
+                _speedLerp);
+
+            if (transform.position == _target.position)
+            {
+                transform.parent = _target;
+                _isMove = false;
+            }
         }
     }
 }

@@ -10,13 +10,20 @@ public class TriggerInitCrab : MonoBehaviour
 
     private bool isActiveTriggerCrab = false;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Start()
+    {
+        prefabCrab.gameObject.SetActive(false);
+    }
+
+    private void OnTriggerEnter(Collider collision)
     {
         if (isActiveTriggerCrab)
         {
-            if (collision.gameObject.TryGetComponent(out XROrigin _))
+            if (collision.gameObject.TryGetComponent(out PlayerAudio _))
             {
-                Instantiate(prefabCrab, positionStart.position, Quaternion.Euler(-90,0,0));
+                prefabCrab.gameObject.SetActive(true);
+                prefabCrab.JumpToPlayer();
+                isActiveTriggerCrab = false;
             }
         }
     }

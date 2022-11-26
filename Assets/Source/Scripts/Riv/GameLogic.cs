@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameLogic : MonoBehaviour
 {
@@ -21,6 +22,10 @@ public class GameLogic : MonoBehaviour
 
     [SerializeField] private RouchCounter _rouchCounter;
 
+    [SerializeField] private TriggerInitCrab _triggerInitCrab;
+
+    [SerializeField] private InputActionProperty _helpPressed;
+
     private GameStates _gameState = 0;
 
     private void Start()
@@ -31,7 +36,14 @@ public class GameLogic : MonoBehaviour
 
         _spawnerTaracan.StartSpawnRoach(2, 0);
 
-        _spawnerTaracan.AllRoachDie += OnAllRoachDie; 
+        _spawnerTaracan.AllRoachDie += OnAllRoachDie;
+
+        _helpPressed.action.started += ActionOnStarted;
+    }
+
+    private void ActionOnStarted(InputAction.CallbackContext obj)
+    {
+        VRSubtatile.Instance.ShowSubtitle("МИССИЯ");
     }
 
     private void PotOnPlita()
@@ -51,7 +63,18 @@ public class GameLogic : MonoBehaviour
 
     private void OnAllRoachDie()
     {
-        //
+        if (_gameState == GameStates.PelmenInPot)
+        {
+            _pot.MomentumHaiting();
+        }
+
+        if(_gameState == GameStates.KillTaracansTwo)
+        {           
+            VRSubtatile.Instance.ShowSubtitle("Странный звук у дальнего стола...");
+
+            _triggerInitCrab.ActiveredTriggerCrab();
+            _gameState= GameStates.End;
+        }
     }
 
     private void OnPelmenInPot(int count)
@@ -71,7 +94,8 @@ public class GameLogic : MonoBehaviour
     private void OnPotHeating()
     {
         //пора закинуть пельмени/ может вызываться повторно 
-        VRSubtatile.Instance.ShowSubtitle("Пора закинуть пельмени");
+        if(_gameState == GameStates.PelmenInPot)
+            VRSubtatile.Instance.ShowSubtitle("Пора закинуть пельмени");
     }
 
     private void OnDestroy()
@@ -81,6 +105,8 @@ public class GameLogic : MonoBehaviour
         _pot.PotOnPlita -= PotOnPlita;
 
         _spawnerTaracan.AllRoachDie -= OnAllRoachDie;
+
+        _helpPressed.action.started -= ActionOnStarted;
     }
 }
 
