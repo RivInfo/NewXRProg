@@ -10,6 +10,8 @@ public class TriggerInitCrab : MonoBehaviour
 
     private bool isActiveTriggerCrab = false;
 
+    public CrabEndGame GetCrab => prefabCrab;
+
     private void Start()
     {
         prefabCrab.gameObject.SetActive(false);

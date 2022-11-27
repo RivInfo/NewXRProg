@@ -224,6 +224,9 @@ GameObject:
   - component: {fileID: 6878634528368612563}
   - component: {fileID: 303593586}
   - component: {fileID: 303593587}
+  - component: {fileID: 1535291410}
+  - component: {fileID: 1535291411}
+  - component: {fileID: 1535291399}
   m_Layer: 0
   m_Name: Pot
   m_TagString: Untagged
@@ -325,7 +328,7 @@ MonoBehaviour:
   _effectVape: {fileID: 178918920871533844}
   _effectSmallVape: {fileID: 8928095363322927980}
   _heatingSecondsStep: 1
-  _heatingSecondsMax: 60
+  _heatingSecondsMax: 30
 --- !u!65 &6878634528368612564
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -540,7 +543,129 @@ MonoBehaviour:
   _outHand:
     m_PersistentCalls:
       m_Calls: []
-  _audioSource: {fileID: 0}
+  _audioSource: {fileID: 1535291399}
+--- !u!65 &1535291410
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7174755999555420618}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.06417799, y: 0.025815971, z: 0.052832402}
+  m_Center: {x: -0.18, y: 0, z: 0.17347328}
+--- !u!65 &1535291411
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7174755999555420618}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.06417799, y: 0.025815971, z: 0.052832402}
+  m_Center: {x: 0.17894721, y: 0, z: 0.17347328}
+--- !u!82 &1535291399
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7174755999555420618}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 112d2406423247043a2a662f43d0c48c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &502827394991136545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -620,9 +745,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e5ac9c9b118d74a85646d515da4c68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
-  _minMaxOffset: {x: 0, y: 0.2}
-  _minMaxRandomRotation: {x: 0, y: 0}
+  _speed: 0.04
+  _minMaxOffset: {x: 0, y: 0.05}
+  _minMaxRandomRotation: {x: 0, y: 5}
 --- !u!1001 &933651497717774177
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -697,9 +822,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e5ac9c9b118d74a85646d515da4c68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
-  _minMaxOffset: {x: 0, y: 0.2}
-  _minMaxRandomRotation: {x: 0, y: 0}
+  _speed: 0.04
+  _minMaxOffset: {x: 0, y: 0.05}
+  _minMaxRandomRotation: {x: 0, y: 5}
 --- !u!4 &828176804035940490 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4459748c40bc0c84a9fac664b9eeb831, type: 3}
@@ -737,12 +862,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1148476348562404528, guid: de374f2331a5446c68fbc1f0e0a38dd6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.16379751
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148476348562404528, guid: de374f2331a5446c68fbc1f0e0a38dd6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2797785
+      value: 0.16379756
       objectReference: {fileID: 0}
     - target: {fileID: 1148476348562404528, guid: de374f2331a5446c68fbc1f0e0a38dd6, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.2797785
+      value: 0.44781104
       objectReference: {fileID: 0}
     - target: {fileID: 1148476348562404528, guid: de374f2331a5446c68fbc1f0e0a38dd6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -874,8 +1003,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e5ac9c9b118d74a85646d515da4c68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
-  _minMaxOffset: {x: 0, y: 0.2}
+  _speed: 0.04
+  _minMaxOffset: {x: 0, y: 0.05}
   _minMaxRandomRotation: {x: 0, y: 0}
 --- !u!4 &2963710693408314105 stripped
 Transform:
@@ -956,8 +1085,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e5ac9c9b118d74a85646d515da4c68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
-  _minMaxOffset: {x: 0, y: 0.2}
+  _speed: 0.04
+  _minMaxOffset: {x: 0, y: 0.05}
   _minMaxRandomRotation: {x: 0, y: 0}
 --- !u!4 &4275760422906431801 stripped
 Transform:
@@ -1043,9 +1172,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e5ac9c9b118d74a85646d515da4c68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
-  _minMaxOffset: {x: 0, y: 0.2}
-  _minMaxRandomRotation: {x: 0, y: 0}
+  _speed: 0.04
+  _minMaxOffset: {x: 0, y: 0.05}
+  _minMaxRandomRotation: {x: 0, y: 5}
 --- !u!1001 &6347447825269472644
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1120,8 +1249,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e5ac9c9b118d74a85646d515da4c68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
-  _minMaxOffset: {x: 0, y: 0.2}
+  _speed: 0.04
+  _minMaxOffset: {x: 0, y: 0.05}
   _minMaxRandomRotation: {x: 0, y: 0}
 --- !u!4 &6889402797729405551 stripped
 Transform:
@@ -1210,8 +1339,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e5ac9c9b118d74a85646d515da4c68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
-  _minMaxOffset: {x: 0, y: 1}
+  _speed: 0.04
+  _minMaxOffset: {x: 0, y: 0.05}
   _minMaxRandomRotation: {x: 0, y: 0}
 --- !u!4 &6861013655079183765 stripped
 Transform:
@@ -1297,8 +1426,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e5ac9c9b118d74a85646d515da4c68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
-  _minMaxOffset: {x: 0, y: 0.2}
+  _speed: 0.04
+  _minMaxOffset: {x: 0, y: 0.05}
   _minMaxRandomRotation: {x: 0, y: 0}
 --- !u!1001 &8366705964204035726
 PrefabInstance:
@@ -1473,8 +1602,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e5ac9c9b118d74a85646d515da4c68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
-  _minMaxOffset: {x: 0, y: 0.2}
+  _speed: 0.04
+  _minMaxOffset: {x: 0, y: 0.05}
   _minMaxRandomRotation: {x: 0, y: 0}
 --- !u!4 &8899109847319369478 stripped
 Transform:

@@ -38,7 +38,30 @@ public class GameLogic : MonoBehaviour
 
         _spawnerTaracan.AllRoachDie += OnAllRoachDie;
 
+        _triggerInitCrab.GetCrab.EndMove += EndGame;
+
         _helpPressed.action.started += ActionOnStarted;
+    }
+
+    private void OnDestroy()
+    {
+        _pot.PotHeating -= OnPotHeating;
+        _pot.PelmenInPot -= OnPelmenInPot;
+        _pot.PotOnPlita -= PotOnPlita;
+
+        _spawnerTaracan.AllRoachDie -= OnAllRoachDie;
+
+        _helpPressed.action.started -= ActionOnStarted;
+
+        _triggerInitCrab.GetCrab.EndMove -= EndGame;
+    }
+
+    private void EndGame()
+    {
+        if(_gameState == GameStates.End)
+        {
+
+        }
     }
 
     private void ActionOnStarted(InputAction.CallbackContext obj)
@@ -96,17 +119,6 @@ public class GameLogic : MonoBehaviour
         //пора закинуть пельмени/ может вызыватьс€ повторно 
         if(_gameState == GameStates.PelmenInPot)
             VRSubtatile.Instance.ShowSubtitle("ѕора закинуть пельмени");
-    }
-
-    private void OnDestroy()
-    {
-        _pot.PotHeating -= OnPotHeating;
-        _pot.PelmenInPot -= OnPelmenInPot;
-        _pot.PotOnPlita -= PotOnPlita;
-
-        _spawnerTaracan.AllRoachDie -= OnAllRoachDie;
-
-        _helpPressed.action.started -= ActionOnStarted;
     }
 }
 

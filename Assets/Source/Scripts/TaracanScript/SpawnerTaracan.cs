@@ -68,7 +68,7 @@ public class SpawnerTaracan : MonoBehaviour
         _killCount++;
         RochKillCount?.Invoke(_killCount);
 
-        if (enemies.Count == 0)
+        if (_killCount >= CurrenMaxRoch)
         {
             AllRoachDie?.Invoke();
         }

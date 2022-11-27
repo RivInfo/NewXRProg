@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CrabEndGame : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class CrabEndGame : MonoBehaviour
     [SerializeField] private float _speedLerp = 0.25f;
 
     private bool _isMove = false;
+
+    public event UnityAction EndMove;
 
     public void JumpToPlayer()
     {
@@ -36,6 +39,7 @@ public class CrabEndGame : MonoBehaviour
             {
                 transform.parent = _target;
                 _isMove = false;
+                EndMove?.Invoke();
             }
         }
     }
