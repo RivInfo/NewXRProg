@@ -24,6 +24,8 @@ public class GameLogic : MonoBehaviour
 
     [SerializeField] private TriggerInitCrab _triggerInitCrab;
 
+    [SerializeField] private EndCanvas _endCanvas;
+
     [SerializeField] private InputActionProperty _helpPressed;
 
     private GameStates _gameState = 0;
@@ -56,24 +58,53 @@ public class GameLogic : MonoBehaviour
         _triggerInitCrab.GetCrab.EndMove -= EndGame;
     }
 
+    public string GetActualiMission()
+    {
+        string helpText = "";
+
+        switch (_gameState)
+        {
+            case GameStates.NeedPotHeating:
+                helpText = "Поставьте кастрюлю разогреваться";
+                break;
+            case GameStates.PotHeat:
+                helpText = "Дождитесь пока кастрюля разогреется";
+                break;
+            case GameStates.PelmenNeed:
+                helpText = "Закинуть пельмени из холодильника";
+                break;
+            case GameStates.KillTaracansTwo:
+                helpText = "Уничтожьте всех тараканов на столе";
+                break;
+            case GameStates.End:
+                helpText = "Что-то под дальним столом";
+                break;
+            default:
+                helpText = _gameState.ToString();
+                break;
+        }
+
+        return helpText;
+    }
+
     private void EndGame()
     {
         if(_gameState == GameStates.End)
         {
-
+            _endCanvas.StartEnd();
         }
     }
 
     private void ActionOnStarted(InputAction.CallbackContext obj)
-    {
-        VRSubtatile.Instance.ShowSubtitle("МИССИЯ");
+    {       
+        VRSubtatile.Instance.ShowSubtitle(GetActualiMission());
     }
 
     private void PotOnPlita()
     {
         if(_gameState == 0)
         {
-            _gameState = GameStates.PelmenInPot;
+            _gameState = GameStates.PotHeat;
 
             _spawnerTaracan.StartSpawnRoach(_roachCountOne, _spawnDelayOne);
             _rouchCounter.CounterActivated();
@@ -86,7 +117,7 @@ public class GameLogic : MonoBehaviour
 
     private void OnAllRoachDie()
     {
-        if (_gameState == GameStates.PelmenInPot)
+        if (_gameState == GameStates.PotHeat)
         {
             _pot.MomentumHaiting();
         }
@@ -102,7 +133,7 @@ public class GameLogic : MonoBehaviour
 
     private void OnPelmenInPot(int count)
     {
-        if(_gameState == GameStates.PelmenInPot && count >= _pelmenCountFromStateUp)
+        if(_gameState == GameStates.PelmenNeed && count >= _pelmenCountFromStateUp)
         {
             _gameState = GameStates.KillTaracansTwo;
 
@@ -117,16 +148,19 @@ public class GameLogic : MonoBehaviour
     private void OnPotHeating()
     {
         //пора закинуть пельмени/ может вызываться повторно 
-        if(_gameState == GameStates.PelmenInPot)
+        if(_gameState == GameStates.PotHeat)
+        {
             VRSubtatile.Instance.ShowSubtitle("Пора закинуть пельмени");
+            _gameState = GameStates.PelmenNeed;
+        }
     }
 }
 
 public enum GameStates
 {
     NeedPotHeating,
-    KillTaracansOne,
-    PelmenInPot,
+    PotHeat,
+    PelmenNeed,
     KillTaracansTwo,
     End
 }

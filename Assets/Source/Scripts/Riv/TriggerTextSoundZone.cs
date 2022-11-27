@@ -17,7 +17,7 @@ public class TriggerTextSoundZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out XROrigin _))
+        if (other.TryGetComponent(out PlayerAudio _))
         {
             TextSoundCall();
         }
